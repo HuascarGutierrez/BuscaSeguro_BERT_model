@@ -3,7 +3,7 @@ from transformers import AutoTokenizer
 import torch
 import numpy as np
 
-RANDOM_SEED = 42 #
+RANDOM_SEED = 42 
 N_ClASSES = 2
 MAX_LEN = 200
 DATASET_PATH = 'data/Caracteristicas_Empleo_Falso.xlsx'

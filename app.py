@@ -66,3 +66,9 @@ async def predecir(request: SentimentRequest):
     prediction_prob = request.prob
     prediccion = predecir_trabajo_fraudulento(test_text, obtener_prob=prediction_prob) 
     return {'Sentimiento': prediccion}
+
+import uvicorn
+import os
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", 10000))  # Usa el puerto asignado por Render
+    uvicorn.run(app, host="0.0.0.0", port=port)
